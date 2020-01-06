@@ -1,0 +1,26 @@
+  
+{
+	"name": "Repository",
+	"servePort": 8000,
+	"tree": {
+		"$className": "DataModel",
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"NexusPluginFramework": {
+              "$path": "src",
+              "NexusInstance": {
+                "$path": "module/Nexus-Instance/src"
+              },
+              "NexusProject": {
+                "$path": "module/Nexus-Project/src",
+				"NexusInstance": {
+				  "$path": "module/Nexus-Instance/src"
+				}
+              }
+			},
+			"NexusPluginFrameworkTests": {
+			  "$path": "test"
+			}
+		}
+	}
+}
