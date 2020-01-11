@@ -12,11 +12,16 @@ theme:
 nav:
   - Home: index.md
   - Classes:
+    - NexusWrappedInstance: classes/NexusPluginFramework.md
     - Base:
       - OverridableIndexInstance: classes/Base/OverridableIndexInstance.md
       - NexusContainer: classes/Base/NexusContainer.md
       - NexusDisablableContainer: classes/Base/NexusDisablableContainer.md
       - NexusWrappedInstance: classes/Base/NexusWrappedInstance.md
+    - Data:
+      - Enum:
+        - NexusEnum: classes/Data/Enum/NexusEnum.md
+        - NexusEnumCollection: classes/Data/Enum/NexusEnumCollection.md
   - Contributing: contributing.md
 
 markdown_extensions:
