@@ -1,0 +1,24 @@
+site_name: Nexus Plugin Framework Documentation
+site_url: https://thenexusavenger.github.io/Nexus-Plugin-Framework
+repo_name: TheNexusAvenger/Nexus-Plugin-Framework
+repo_url: https://github.com/TheNexusAvenger/Nexus-Plugin-Framework
+
+theme:
+  name: 'material'
+  palette:
+    primary: 'Blue'
+    accent: 'Light Blue'
+
+nav:
+  - Home: index.md
+  - Classes:
+    - Base:
+      - OverridableIndexInstance: classes/Base/OverridableIndexInstance.md
+      - NexusContainer: classes/Base/NexusContainer.md
+      - NexusDisablableContainer: classes/Base/NexusDisablableContainer.md
+      - NexusWrappedInstance: classes/Base/NexusWrappedInstance.md
+  - Contributing: contributing.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
