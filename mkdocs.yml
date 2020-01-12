@@ -12,7 +12,7 @@ theme:
 nav:
   - Home: index.md
   - Classes:
-    - NexusWrappedInstance: classes/NexusPluginFramework.md
+    - NexusPluginFramework: classes/NexusPluginFramework.md
     - Base:
       - OverridableIndexInstance: classes/Base/OverridableIndexInstance.md
       - NexusContainer: classes/Base/NexusContainer.md
