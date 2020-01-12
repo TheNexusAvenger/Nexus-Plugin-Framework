@@ -47,29 +47,29 @@ Sets the `NexusContainer.Parent` property to nil,
 locks the `NexusContainer.Parent` property,
 and calls `Destroy` on all children.
 
-## `NexusContainer NexusContainer:FindFirstAncestor(Name)`
+## `NexusContainer NexusContainer:FindFirstAncestor(string Name)`
 Returns the first ancestor of the `NexusContainer`
 whose `NexusContainer.Name` is equal to the given
 `Name`.
 
-## `NexusContainer NexusContainer:FindFirstAncestorOfClass(ClassName)`
+## `NexusContainer NexusContainer:FindFirstAncestorOfClass(string ClassName)`
 Returns the first ancestor of the `NexusContainer`
 whose `NexusContainer.ClassName` is equal to the
 given `ClassName`.
 
-## `NexusContainer NexusContainer:FindFirstAncestorWhichIsA(ClassName)`
+## `NexusContainer NexusContainer:FindFirstAncestorWhichIsA(string ClassName)`
 Returns the first ancestor of the `NexusContainer` for whom
 `NexusContainer:IsA` returns true for the given ClassName.
 
-## `NexusContainer NexusContainer:FindFirstChild(Name,Recursive)`
+## `NexusContainer NexusContainer:FindFirstChild(string Name,bool Recursive)`
 Returns the first child of the `NexusContainer` found with
 the given name.
 
-## `NexusContainer NexusContainer:FindFirstChildOfClass(ClassName)`
+## `NexusContainer NexusContainer:FindFirstChildOfClass(string ClassName)`
 Returns the first child of the `NexusContainer` whose `ClassName`
 is equal to the given `ClassName`.
 
-## `NexusContainer NexusContainer:FindFirstChildWhichIsA(ClassName,Recursive)`
+## `NexusContainer NexusContainer:FindFirstChildWhichIsA(string ClassName,bool Recursive)`
 Returns the first child of the NexusContainer for whom 
 `NexusContainer:IsA` returns true for the given `ClassName`.
 
@@ -84,19 +84,19 @@ Returns an array containing all of the descendants of the
 ## `string NexusContainer:GetFullName()`
 Returns a string describing the `NexusContainer`'s ancestry.
 
-## `bool NexusContainer:IsAncestorOf(OtherContainer)`
+## `bool NexusContainer:IsAncestorOf(NexusContainer OtherContainer)`
 Returns true if an `NexusContainer` is an ancestor of the given
 descendant.
 
-## `bool NexusContainer:IsDescendantOf(OtherContainer)`
+## `bool NexusContainer:IsDescendantOf(NexusContainer OtherContainer)`
 Returns true if an `NexusContainer` is a descendant of the given
 ancestor.
 
-## `NexusContainer NexusContainer:WaitForChild(Name,TimeOut)`
+## `NexusContainer NexusContainer:WaitForChild(string Name,float TimeOut)`
 Returns the child of the `NexusContainer` with the given name.
 If the child does not exist, it will yield the current thread
 until it does.
 
-## `NexusConnection NexusContainer:ConnectToHighestParent(EventName,ConnectionFunction)`
+## `NexusConnection NexusContainer:ConnectToHighestParent(string EventName,function ConnectionFunction)`
 Connects an event to the highest parent. If the ancestry
 changes, the connected event changes. Returns a connection.

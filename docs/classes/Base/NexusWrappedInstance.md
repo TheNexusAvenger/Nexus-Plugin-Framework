@@ -3,14 +3,14 @@
 
 Wraps a Roblox Instance with the `NexusContainer` API.
 
-## `static NexusWrappedInstance NexusWrappedInstance.GetInstance(ExistingInstance)`
+## `static NexusWrappedInstance NexusWrappedInstance.GetInstance(Instance ExistingInstance)`
 Gets a Nexus Wrapped Instance from a string
 or an existing Roblox instance. When using
 existing instances, this should be used since
 it goes through a cache which prevents a single
 instance having multiple `NexusWrappedInstance`s.
 
-## `static NexusWrappedInstance.new(ExistingInstance)`
+## `static NexusWrappedInstance NexusWrappedInstance.new(Instance ExistingInstance)`
 Creates a Nexus Wrapped Instance object from a string
 or an existing Roblox instance.
 
