@@ -50,6 +50,9 @@ nav:
       - Scroll:
         - NexusScrollBar: classes/UI/Scroll/NexusScrollBar.md
         - NexusScrollingFrame: classes/UI/Scroll/NexusScrollingFrame.md
+  - Examples:
+    - Toolbar: examples/toolbar.md
+    - Collapsable List: examples/collapsable-list.md
   - Contributing: contributing.md
 
 markdown_extensions:
