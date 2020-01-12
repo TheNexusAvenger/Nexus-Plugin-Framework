@@ -30,6 +30,26 @@ nav:
       - NexusSettings: classes/Plugin/NexusSettings.md
       - NexusStudioTheme: classes/Plugin/NexusStudioTheme.md
       - NexusUserInput: classes/Plugin/NexusUserInput.md
+    - UI:
+      - CollapsableList:
+        - NexusCollapsableListFrame: classes/UI/CollapsableList/NexusCollapsableListFrame.md
+        - Constraint:
+          - NexusCollapsableListFrameConstraint: classes/UI/CollapsableList/Constraint/NexusCollapsableListFrameConstraint.md
+          - NexusContentsPropertyConstraint: classes/UI/CollapsableList/Constraint/NexusContentsPropertyConstraint.md
+          - NexusMultiConstraint: classes/UI/CollapsableList/Constraint/NexusMultiConstraint.md
+          - NexusSelectionConstraint: classes/UI/CollapsableList/Constraint/NexusSelectionConstraint.md
+      - Constraint:
+        - NexusBoundingSizeConstraint: classes/UI/Constraint/NexusBoundingSizeConstraint.md
+      - Input:
+        - NexusCheckBox: classes/UI/Input/NexusCheckBox.md
+        - NexusImageButton: classes/UI/Input/NexusImageButton.md
+        - NexusTextBox: classes/UI/Input/NexusTextBox.md
+        - NexusTextButton: classes/UI/Input/NexusTextButton.md
+        - Abstract:
+          - NexusGuiButton: classes/UI/Input/Abstract/NexusGuiButton.md
+      - Scroll:
+        - NexusScrollBar: classes/UI/Scroll/NexusScrollBar.md
+        - NexusScrollingFrame: classes/UI/Scroll/NexusScrollingFrame.md
   - Contributing: contributing.md
 
 markdown_extensions:
