@@ -22,6 +22,14 @@ nav:
       - Enum:
         - NexusEnum: classes/Data/Enum/NexusEnum.md
         - NexusEnumCollection: classes/Data/Enum/NexusEnumCollection.md
+    - Plugin:
+      - NexusPlugin: classes/Plugin/NexusPlugin.md
+      - NexusPluginButton: classes/Plugin/NexusPluginButton.md
+      - NexusPluginGui: classes/Plugin/NexusPluginGui.md
+      - NexusPluginToolbar: classes/Plugin/NexusPluginToolbar.md
+      - NexusSettings: classes/Plugin/NexusSettings.md
+      - NexusStudioTheme: classes/Plugin/NexusStudioTheme.md
+      - NexusUserInput: classes/Plugin/NexusUserInput.md
   - Contributing: contributing.md
 
 markdown_extensions:
