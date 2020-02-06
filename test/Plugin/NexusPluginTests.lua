@@ -21,6 +21,15 @@ NexusUnitTesting:RegisterUnitTest("Constructor",function(UnitTest)
 	UnitTest:AssertEquals(tostring(CuT),"NexusPlugin","Name is incorrect.")
 end)
 
+--[[
+Tests the SetPlugin method.
+--]]
+NexusUnitTesting:RegisterUnitTest("Constructor",function(UnitTest)
+	local CuT = NexusPlugin.new()
+	NexusPlugin.SetPlugin(CuT)
+	UnitTest:AssertSame(NexusPlugin.GetPlugin(),CuT,"Plugin wasn't set.")
+end)
+
 
 
 return true

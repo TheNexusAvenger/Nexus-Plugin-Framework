@@ -17,7 +17,7 @@ local NexusPlugin = NexusContainer:Extend()
 NexusPlugin:SetClassName(CLASS_NAME)
 NexusPluginFramework:SetContextResource(NexusPlugin)
 
-local CachedPlugin
+local CachedPlugin = plugin
 
 
 
@@ -28,22 +28,21 @@ a "mock" plugin (NexusPlugin).
 function NexusPlugin.GetPlugin()
 	--Craete the cached plugin if needed.
 	if not CachedPlugin then
-		--Get the plugin.
-		local Plugin
-		pcall(function()
-			Plugin = PluginManager():CreatePlugin()
-		end)
-		
-		--Create the cached plugin.
-		if Plugin then
-			CachedPlugin = Plugin
-		else
-			CachedPlugin = NexusPlugin.new()
-		end
+		CachedPlugin = NexusPlugin.new()
 	end
 	
 	--Return the cached plugin.
 	return CachedPlugin
+end
+
+--[[
+Sets the static plugin instance. Needed to be
+used in a Script since plugin is not defined
+in ModuleScripts, even if it required by a plugin
+Script.
+--]]
+function NexusPlugin.SetPlugin(NewPlugin)
+	CachedPlugin = NewPlugin
 end
 
 --[[
