@@ -41,3 +41,6 @@ Returns the plugin instance.
 
 ## [`NexusSettings`](Plugin/NexusSettings.md) ` NexusPluginFramework:GetSettings()`
 Returns the settings instance.
+
+## `void NexusPluginFramework:SetPlugin(`[`NexusPlugin`](Plugin/NexusPlugin.md)&nbsp;`Plugin)`
+Sets the plugin instance. Needed when initializing the framework.
