@@ -65,6 +65,14 @@ function NexusPluginFramework:GetClass(ClassName)
 end
 
 --[[
+Sets the plugin instance. Needed when
+initializing the framework.
+--]]
+function NexusPluginFramework:SetPlugin(Plugin)
+	return NexusPlugin.SetPlugin(Plugin)
+end
+
+--[[
 Returns the plugin instance.
 --]]
 function NexusPluginFramework:GetPlugin()
