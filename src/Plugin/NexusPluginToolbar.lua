@@ -17,15 +17,13 @@ local NexusPluginToolbar = NexusWrappedInstance:Extend()
 NexusPluginToolbar:SetClassName(CLASS_NAME)
 NexusPluginFramework:SetContextResource(NexusPluginToolbar)
 
-local Plugin = NexusPlugin.GetPlugin()
-
 
 
 --[[
 Creates a Nexus Plugin Toolbar object.
 --]]
 function NexusPluginToolbar:__new(ToolbarName)
-	local Toolbar = Plugin:CreateToolbar(ToolbarName)
+	local Toolbar = NexusPlugin.GetPlugin():CreateToolbar(ToolbarName)
 	self:InitializeSuper(Toolbar)
 	self.Name = CLASS_NAME
 	

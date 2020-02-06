@@ -17,15 +17,13 @@ local NexusPluginGui = NexusWrappedInstance:Extend()
 NexusPluginGui:SetClassName(CLASS_NAME)
 NexusPluginFramework:SetContextResource(NexusPluginGui)
 
-local Plugin = NexusPlugin.GetPlugin()
-
 
 
 --[[
 Creates a Nexus Plugin Gui object.
 --]]
 function NexusPluginGui:__new(WidgetName,DockWidgetInfo)
-	local PluginGui = Plugin:CreateDockWidgetPluginGui(WidgetName,DockWidgetInfo)
+	local PluginGui = NexusPlugin.GetPlugin():CreateDockWidgetPluginGui(WidgetName,DockWidgetInfo)
 	self:InitializeSuper(PluginGui)
 	
 	--Store the Gui.

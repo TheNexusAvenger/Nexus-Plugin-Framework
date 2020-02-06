@@ -53,7 +53,6 @@ NexusWrappedInstance:SetClassName(CLASS_NAME)
 NexusPluginFramework:SetContextResource(NexusWrappedInstance)
 
 local ReadOnlyProperties = {}
-local Plugin = NexusPlugin.GetPlugin()
 local Settings = NexusSettings.GetSettings()
 
 local CachedInstances = {}
