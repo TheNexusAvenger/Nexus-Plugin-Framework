@@ -247,7 +247,7 @@ function NexusWrappedInstance:__new(ExistingInstance)
 	table.insert(self.__ConnectionsToClear,ExistingInstance.Changed:Connect(function(PropertyName)
 		if not ReadOnlyProperties[PropertyName] and not NoBackwardsReplicationProperties[PropertyName] then
 			--Wrap the error.
-			local Worked,ErrorMessage = pcall(function()
+			pcall(function()
 				--Set the changed property or fire a changed signal.
 				local ExistingValue,NewValue = self[PropertyName],ExistingInstance[PropertyName]
 				if not IgnoreChangesQueue[PropertyName] or (ExistingValue ~= NewValue and typeof(ExistingValue) == typeof(NewValue)) then
@@ -263,16 +263,6 @@ function NexusWrappedInstance:__new(ExistingInstance)
 					end
 				end
 			end)
-			
-			--Throw up the error.
-			if not Worked then
-				local Property = string.sub(ErrorMessage,1,string.len(ErrorMessage) - string.len(ExistingInstance.ClassName) - 26)
-				if Property == PropertyName then
-					ReadOnlyProperties[PropertyName] = true
-				else
-					error(ErrorMessage)
-				end
-			end
 		end
 	end))
 	
