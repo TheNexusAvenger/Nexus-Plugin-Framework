@@ -49,8 +49,8 @@ Returns the color corresponding to the arguments provided.
 --]]
 function NexusStudioTheme:GetColor(StyleGuideColor,Modifier)
 	--Correct the input.
-	if type(StyleGuideColor) == "string" then
-		StyleGuideColor = Enum.StudioStyleGuideColor[StyleGuideColor]	
+	if typeof(StyleGuideColor) == "EnumItem" then
+		StyleGuideColor = string.sub(tostring(StyleGuideColor),28)
 	end
 	
 	if not Modifier then

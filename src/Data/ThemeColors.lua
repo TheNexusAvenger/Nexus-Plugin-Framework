@@ -13,7 +13,7 @@ print("return {")
 for _,Theme in pairs(settings().Studio:GetAvailableThemes()) do
 	print("\t[Enum.UITheme."..tostring(Theme).."] = {")
 	for _,ColorEnum in pairs(Enum.StudioStyleGuideColor:GetEnumItems()) do
-		print("\t\t["..tostring(ColorEnum).."] = {")
+		print("\t\t[\""..string.sub(tostring(ColorEnum),28).."\"] = {")
 		for _,ModifierEnum in pairs(Enum.StudioStyleGuideModifier:GetEnumItems()) do
 			print("\t\t\t["..tostring(ModifierEnum).."] = Color3.new("..tostring(Theme:GetColor(ColorEnum,ModifierEnum)).."),")
 		end
@@ -28,1253 +28,1533 @@ print("}")
 
 return {
 	[Enum.UITheme.Light] = {
-		[Enum.StudioStyleGuideColor.MainBackground] = {
+		["MainBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 1, 1),
 		},
-		[Enum.StudioStyleGuideColor.Titlebar] = {
+		["Titlebar"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.890196, 0.890196, 0.890196),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.890196, 0.890196, 0.890196),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.890196, 0.890196, 0.890196),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.890196, 0.890196, 0.890196),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.890196, 0.890196, 0.890196),
 		},
-		[Enum.StudioStyleGuideColor.Dropdown] = {
+		["Dropdown"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 1, 1),
 		},
-		[Enum.StudioStyleGuideColor.Tooltip] = {
+		["Tooltip"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 1, 1),
 		},
-		[Enum.StudioStyleGuideColor.Notification] = {
+		["Notification"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 1, 1),
 		},
-		[Enum.StudioStyleGuideColor.ScrollBar] = {
+		["ScrollBar"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.858824, 0.858824, 0.858824),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.905882, 0.905882, 0.905882),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.894118, 0.933333, 0.996078),
 		},
-		[Enum.StudioStyleGuideColor.ScrollBarBackground] = {
+		["ScrollBarBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.933333, 0.933333, 0.933333),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.933333, 0.933333, 0.933333),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.933333, 0.933333, 0.933333),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.933333, 0.933333, 0.933333),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.933333, 0.933333, 0.933333),
 		},
-		[Enum.StudioStyleGuideColor.TabBar] = {
+		["TabBar"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.94902, 0.94902, 0.94902),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.94902, 0.94902, 0.94902),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.94902, 0.94902, 0.94902),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.94902, 0.94902, 0.94902),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.94902, 0.94902, 0.94902),
 		},
-		[Enum.StudioStyleGuideColor.Tab] = {
+		["Tab"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.94902, 0.94902, 0.94902),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.94902, 0.94902, 0.94902),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.94902, 0.94902, 0.94902),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.894118, 0.933333, 0.996078),
 		},
-		[Enum.StudioStyleGuideColor.RibbonTab] = {
+		["RibbonTab"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.952941, 0.952941, 0.952941),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.952941, 0.952941, 0.952941),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.952941, 0.952941, 0.952941),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 1, 1),
 		},
-		[Enum.StudioStyleGuideColor.RibbonTabTopBar] = {
+		["RibbonTabTopBar"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 1, 1),
 		},
-		[Enum.StudioStyleGuideColor.Button] = {
+		["Button"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.894118, 0.933333, 0.996078),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.858824, 0.858824, 0.858824),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.894118, 0.933333, 0.996078),
 		},
-		[Enum.StudioStyleGuideColor.MainButton] = {
+		["MainButton"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.894118, 0.933333, 0.996078),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.894118, 0.933333, 0.996078),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.858824, 0.858824, 0.858824),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.894118, 0.933333, 0.996078),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.894118, 0.933333, 0.996078),
 		},
-		[Enum.StudioStyleGuideColor.RibbonButton] = {
+		["RibbonButton"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.858824, 0.858824, 0.858824),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.858824, 0.858824, 0.858824),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.894118, 0.933333, 0.996078),
 		},
-		[Enum.StudioStyleGuideColor.ViewPortBackground] = {
+		["ViewPortBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.666667, 0.666667, 0.666667),
 		},
-		[Enum.StudioStyleGuideColor.InputFieldBackground] = {
+		["InputFieldBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.905882, 0.905882, 0.905882),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.894118, 0.933333, 0.996078),
 		},
-		[Enum.StudioStyleGuideColor.Item] = {
+		["Item"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.407843, 0.580392, 0.85098),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.894118, 0.933333, 0.996078),
 		},
-		[Enum.StudioStyleGuideColor.TableItem] = {
+		["TableItem"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.960784, 0.960784, 0.960784),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.407843, 0.580392, 0.85098),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.960784, 0.960784, 0.960784),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.960784, 0.960784, 0.960784),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.894118, 0.933333, 0.996078),
 		},
-		[Enum.StudioStyleGuideColor.CategoryItem] = {
+		["CategoryItem"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.913726, 0.913726, 0.913726),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.913726, 0.913726, 0.913726),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.913726, 0.913726, 0.913726),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.913726, 0.913726, 0.913726),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.913726, 0.913726, 0.913726),
 		},
-		[Enum.StudioStyleGuideColor.GameSettingsTableItem] = {
+		["GameSettingsTableItem"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.960784, 0.960784, 0.960784),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.960784, 0.960784, 0.960784),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.960784, 0.960784, 0.960784),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.894118, 0.933333, 0.996078),
 		},
-		[Enum.StudioStyleGuideColor.GameSettingsTooltip] = {
+		["GameSettingsTooltip"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.458824, 0.458824, 0.458824),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.458824, 0.458824, 0.458824),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.458824, 0.458824, 0.458824),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.458824, 0.458824, 0.458824),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.458824, 0.458824, 0.458824),
 		},
-		[Enum.StudioStyleGuideColor.EmulatorBar] = {
+		["EmulatorBar"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.894118, 0.933333, 0.996078),
 		},
-		[Enum.StudioStyleGuideColor.EmulatorDropDown] = {
+		["EmulatorDropDown"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.258824, 0.258824, 0.258824),
 		},
-		[Enum.StudioStyleGuideColor.ColorPickerFrame] = {
+		["ColorPickerFrame"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.929412, 0.929412, 0.929412),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.929412, 0.929412, 0.929412),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.929412, 0.929412, 0.929412),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.929412, 0.929412, 0.929412),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.929412, 0.929412, 0.929412),
 		},
-		[Enum.StudioStyleGuideColor.CurrentMarker] = {
+		["CurrentMarker"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0.635294, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0.635294, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0.635294, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0.635294, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0.635294, 1),
 		},
-		[Enum.StudioStyleGuideColor.Border] = {
+		["Border"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.713726, 0.713726, 0.713726),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.713726, 0.713726, 0.713726),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.713726, 0.713726, 0.713726),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.713726, 0.713726, 0.713726),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.713726, 0.713726, 0.713726),
 		},
-		[Enum.StudioStyleGuideColor.Shadow] = {
+		["Shadow"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.933333, 0.933333, 0.933333),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.933333, 0.933333, 0.933333),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.933333, 0.933333, 0.933333),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.933333, 0.933333, 0.933333),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.933333, 0.933333, 0.933333),
 		},
-		[Enum.StudioStyleGuideColor.Light] = {
+		["Light"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.952941, 0.952941, 0.952941),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.952941, 0.952941, 0.952941),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.952941, 0.952941, 0.952941),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.952941, 0.952941, 0.952941),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.952941, 0.952941, 0.952941),
 		},
-		[Enum.StudioStyleGuideColor.Dark] = {
+		["Dark"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.627451, 0.627451, 0.627451),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.627451, 0.627451, 0.627451),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.627451, 0.627451, 0.627451),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.627451, 0.627451, 0.627451),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.627451, 0.627451, 0.627451),
 		},
-		[Enum.StudioStyleGuideColor.Mid] = {
+		["Mid"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.933333, 0.933333, 0.933333),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.933333, 0.933333, 0.933333),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.933333, 0.933333, 0.933333),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.933333, 0.933333, 0.933333),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.933333, 0.933333, 0.933333),
 		},
-		[Enum.StudioStyleGuideColor.MainText] = {
+		["MainText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.470588, 0.470588, 0.470588),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0),
 		},
-		[Enum.StudioStyleGuideColor.SubText] = {
+		["SubText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.470588, 0.470588, 0.470588),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.666667, 0.666667, 0.666667),
 		},
-		[Enum.StudioStyleGuideColor.TitlebarText] = {
+		["TitlebarText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.780392, 0.780392, 0.780392),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0),
 		},
-		[Enum.StudioStyleGuideColor.BrightText] = {
+		["BrightText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0),
 		},
-		[Enum.StudioStyleGuideColor.DimmedText] = {
+		["DimmedText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.533333, 0.533333, 0.533333),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.533333, 0.533333, 0.533333),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.533333, 0.533333, 0.533333),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.533333, 0.533333, 0.533333),
 		},
-		[Enum.StudioStyleGuideColor.LinkText] = {
+		["LinkText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.207843, 0.709804, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.207843, 0.709804, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.207843, 0.709804, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.207843, 0.709804, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.207843, 0.709804, 1),
 		},
-		[Enum.StudioStyleGuideColor.WarningText] = {
+		["WarningText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 0.501961, 0),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 0.501961, 0),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 0.501961, 0),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 0.501961, 0),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 0.501961, 0),
 		},
-		[Enum.StudioStyleGuideColor.ErrorText] = {
+		["ErrorText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 0, 0),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 0, 0),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 0, 0),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 0, 0),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 0, 0),
 		},
-		[Enum.StudioStyleGuideColor.InfoText] = {
+		["InfoText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 1),
 		},
-		[Enum.StudioStyleGuideColor.SensitiveText] = {
+		["SensitiveText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.501961, 0, 0.501961),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.501961, 0, 0.501961),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.501961, 0, 0.501961),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.501961, 0, 0.501961),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.501961, 0, 0.501961),
 		},
-		[Enum.StudioStyleGuideColor.ScriptSideWidget] = {
+		["ScriptSideWidget"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.752941, 0.752941, 0.752941),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.752941, 0.752941, 0.752941),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.752941, 0.752941, 0.752941),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.752941, 0.752941, 0.752941),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.752941, 0.752941, 0.752941),
 		},
-		[Enum.StudioStyleGuideColor.ScriptBackground] = {
+		["ScriptBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 1, 1),
 		},
-		[Enum.StudioStyleGuideColor.ScriptText] = {
+		["ScriptText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0),
 		},
-		[Enum.StudioStyleGuideColor.ScriptSelectionText] = {
+		["ScriptSelectionText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 1, 1),
 		},
-		[Enum.StudioStyleGuideColor.ScriptSelectionBackground] = {
+		["ScriptSelectionBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.431373, 0.631373, 0.945098),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.431373, 0.631373, 0.945098),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.431373, 0.631373, 0.945098),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.431373, 0.631373, 0.945098),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.431373, 0.631373, 0.945098),
 		},
-		[Enum.StudioStyleGuideColor.ScriptFindSelectionBackground] = {
+		["ScriptFindSelectionBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 0.886275, 0.654902),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 0.886275, 0.654902),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 0.886275, 0.654902),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 0.886275, 0.654902),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 0.886275, 0.654902),
 		},
-		[Enum.StudioStyleGuideColor.ScriptMatchingWordSelectionBackground] = {
+		["ScriptMatchingWordSelectionBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.886275, 0.901961, 0.839216),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.886275, 0.901961, 0.839216),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.886275, 0.901961, 0.839216),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.886275, 0.901961, 0.839216),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.886275, 0.901961, 0.839216),
 		},
-		[Enum.StudioStyleGuideColor.ScriptOperator] = {
+		["ScriptOperator"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.498039, 0.498039, 0),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.498039, 0.498039, 0),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.498039, 0.498039, 0),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.498039, 0.498039, 0),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.498039, 0.498039, 0),
 		},
-		[Enum.StudioStyleGuideColor.ScriptNumber] = {
+		["ScriptNumber"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0.498039, 0.498039),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0.498039, 0.498039),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0.498039, 0.498039),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0.498039, 0.498039),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0.498039, 0.498039),
 		},
-		[Enum.StudioStyleGuideColor.ScriptString] = {
+		["ScriptString"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.498039, 0, 0.498039),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.498039, 0, 0.498039),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.498039, 0, 0.498039),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.498039, 0, 0.498039),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.498039, 0, 0.498039),
 		},
-		[Enum.StudioStyleGuideColor.ScriptComment] = {
+		["ScriptComment"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0.498039, 0.0352941),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0.498039, 0.0352941),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0.498039, 0.0352941),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0.498039, 0.0352941),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0.498039, 0.0352941),
 		},
-		[Enum.StudioStyleGuideColor.ScriptPreprocessor] = {
-			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.498039, 0, 0),
-			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.498039, 0, 0),
-			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.498039, 0, 0),
-			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.498039, 0, 0),
-			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.498039, 0, 0),
-		},
-		[Enum.StudioStyleGuideColor.ScriptKeyword] = {
+		["ScriptKeyword"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0.498039),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0.498039),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0.498039),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0.498039),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0.498039),
 		},
-		[Enum.StudioStyleGuideColor.ScriptBuiltInFunction] = {
+		["ScriptBuiltInFunction"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0.498039),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0.498039),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0.498039),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0.498039),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0.498039),
 		},
-		[Enum.StudioStyleGuideColor.ScriptWarning] = {
+		["ScriptWarning"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 1),
 		},
-		[Enum.StudioStyleGuideColor.ScriptError] = {
+		["ScriptError"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 0, 0),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 0, 0),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 0, 0),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 0, 0),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 0, 0),
 		},
-		[Enum.StudioStyleGuideColor.DebuggerCurrentLine] = {
+		["ScriptWhitespace"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.721569, 0.721569, 0.721569),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.721569, 0.721569, 0.721569),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.721569, 0.721569, 0.721569),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.721569, 0.721569, 0.721569),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.721569, 0.721569, 0.721569),
+		},
+		["ScriptRuler"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.65098, 0.65098, 0.65098),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.65098, 0.65098, 0.65098),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.65098, 0.65098, 0.65098),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.65098, 0.65098, 0.65098),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.65098, 0.65098, 0.65098),
+		},
+		["DebuggerCurrentLine"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 0.8),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 0.8),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 1, 0.8),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 1, 0.8),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 1, 0.8),
 		},
-		[Enum.StudioStyleGuideColor.DebuggerErrorLine] = {
+		["DebuggerErrorLine"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 0.8, 0.8),
 		},
-		[Enum.StudioStyleGuideColor.DiffFilePathText] = {
+		["ScriptEditorCurrentLine"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.937255, 0.937255, 0.937255),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.937255, 0.937255, 0.937255),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.937255, 0.937255, 0.937255),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.937255, 0.937255, 0.937255),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.937255, 0.937255, 0.937255),
+		},
+		["DiffFilePathText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0),
 		},
-		[Enum.StudioStyleGuideColor.DiffTextHunkInfo] = {
+		["DiffTextHunkInfo"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.458824, 0.458824, 0.458824),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.458824, 0.458824, 0.458824),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.458824, 0.458824, 0.458824),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.458824, 0.458824, 0.458824),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.458824, 0.458824, 0.458824),
 		},
-		[Enum.StudioStyleGuideColor.DiffTextNoChange] = {
+		["DiffTextNoChange"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0),
 		},
-		[Enum.StudioStyleGuideColor.DiffTextAddition] = {
+		["DiffTextAddition"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0),
 		},
-		[Enum.StudioStyleGuideColor.DiffTextDeletion] = {
+		["DiffTextDeletion"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0),
 		},
-		[Enum.StudioStyleGuideColor.DiffTextSeparatorBackground] = {
+		["DiffTextSeparatorBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.92549, 0.952941, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.92549, 0.952941, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.92549, 0.952941, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.92549, 0.952941, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.92549, 0.952941, 1),
 		},
-		[Enum.StudioStyleGuideColor.DiffTextNoChangeBackground] = {
+		["DiffTextNoChangeBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 1, 1),
 		},
-		[Enum.StudioStyleGuideColor.DiffTextAdditionBackground] = {
+		["DiffTextAdditionBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.882353, 0.968628, 0.909804),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.882353, 0.968628, 0.909804),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.882353, 0.968628, 0.909804),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.882353, 0.968628, 0.909804),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.882353, 0.968628, 0.909804),
 		},
-		[Enum.StudioStyleGuideColor.DiffTextDeletionBackground] = {
+		["DiffTextDeletionBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 0.858824, 0.858824),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 0.858824, 0.858824),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 0.858824, 0.858824),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 0.858824, 0.858824),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 0.858824, 0.858824),
 		},
-		[Enum.StudioStyleGuideColor.DiffLineNum] = {
+		["DiffLineNum"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.458824, 0.458824, 0.458824),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.458824, 0.458824, 0.458824),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.458824, 0.458824, 0.458824),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.458824, 0.458824, 0.458824),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.458824, 0.458824, 0.458824),
 		},
-		[Enum.StudioStyleGuideColor.DiffLineNumSeparatorBackground] = {
+		["DiffLineNumSeparatorBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.847059, 0.901961, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.847059, 0.901961, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.847059, 0.901961, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.847059, 0.901961, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.847059, 0.901961, 1),
 		},
-		[Enum.StudioStyleGuideColor.DiffLineNumNoChangeBackground] = {
+		["DiffLineNumNoChangeBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.980392, 0.980392, 0.980392),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.980392, 0.980392, 0.980392),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.980392, 0.980392, 0.980392),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.980392, 0.980392, 0.980392),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.980392, 0.980392, 0.980392),
 		},
-		[Enum.StudioStyleGuideColor.DiffLineNumAdditionBackground] = {
+		["DiffLineNumAdditionBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.807843, 0.945098, 0.85098),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.807843, 0.945098, 0.85098),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.807843, 0.945098, 0.85098),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.807843, 0.945098, 0.85098),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.807843, 0.945098, 0.85098),
 		},
-		[Enum.StudioStyleGuideColor.DiffLineNumDeletionBackground] = {
+		["DiffLineNumDeletionBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 0.792157, 0.792157),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 0.792157, 0.792157),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 0.792157, 0.792157),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 0.792157, 0.792157),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 0.792157, 0.792157),
 		},
-		[Enum.StudioStyleGuideColor.DiffFilePathBackground] = {
+		["DiffFilePathBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.980392, 0.980392, 0.980392),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.980392, 0.980392, 0.980392),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.980392, 0.980392, 0.980392),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.980392, 0.980392, 0.980392),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.980392, 0.980392, 0.980392),
 		},
-		[Enum.StudioStyleGuideColor.DiffFilePathBorder] = {
+		["DiffFilePathBorder"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.921569, 0.921569, 0.921569),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.921569, 0.921569, 0.921569),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.921569, 0.921569, 0.921569),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.921569, 0.921569, 0.921569),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.921569, 0.921569, 0.921569),
 		},
-		[Enum.StudioStyleGuideColor.Separator] = {
+		["ChatIncomingBgColor"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.960784, 0.960784, 0.960784),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.960784, 0.960784, 0.960784),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.960784, 0.960784, 0.960784),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.960784, 0.960784, 0.960784),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.960784, 0.960784, 0.960784),
+		},
+		["ChatIncomingTextColor"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.0980392, 0.0980392, 0.0980392),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.0980392, 0.0980392, 0.0980392),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.0980392, 0.0980392, 0.0980392),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.0980392, 0.0980392, 0.0980392),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.0980392, 0.0980392, 0.0980392),
+		},
+		["ChatOutgoingBgColor"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.721569, 0.721569, 0.721569),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.721569, 0.721569, 0.721569),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.721569, 0.721569, 0.721569),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.721569, 0.721569, 0.721569),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.721569, 0.721569, 0.721569),
+		},
+		["ChatOutgoingTextColor"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.0980392, 0.0980392, 0.0980392),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.0980392, 0.0980392, 0.0980392),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.0980392, 0.0980392, 0.0980392),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.0980392, 0.0980392, 0.0980392),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.0980392, 0.0980392, 0.0980392),
+		},
+		["ChatModeratedMessageColor"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.87451, 0, 0.0862745),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.87451, 0, 0.0862745),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.87451, 0, 0.0862745),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.87451, 0, 0.0862745),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.87451, 0, 0.0862745),
+		},
+		["Separator"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.8, 0.8, 0.8),
 		},
-		[Enum.StudioStyleGuideColor.ButtonBorder] = {
+		["ButtonBorder"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.713726, 0.713726, 0.713726),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.713726, 0.713726, 0.713726),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.713726, 0.713726, 0.713726),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.713726, 0.713726, 0.713726),
 		},
-		[Enum.StudioStyleGuideColor.ButtonText] = {
+		["ButtonText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.470588, 0.470588, 0.470588),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0),
 		},
-		[Enum.StudioStyleGuideColor.InputFieldBorder] = {
+		["InputFieldBorder"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.784314, 0.784314, 0.784314),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.4, 0.572549, 0.862745),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.784314, 0.784314, 0.784314),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.713726, 0.713726, 0.713726),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.658824, 0.658824, 0.658824),
 		},
-		[Enum.StudioStyleGuideColor.CheckedFieldBackground] = {
+		["CheckedFieldBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0.635294, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.858824, 0.858824, 0.858824),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.784314, 0.784314, 0.784314),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.894118, 0.933333, 0.996078),
 		},
-		[Enum.StudioStyleGuideColor.CheckedFieldBorder] = {
+		["CheckedFieldBorder"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.713726, 0.713726, 0.713726),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.713726, 0.713726, 0.713726),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.713726, 0.713726, 0.713726),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.713726, 0.713726, 0.713726),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.658824, 0.658824, 0.658824),
 		},
-		[Enum.StudioStyleGuideColor.CheckedFieldIndicator] = {
+		["CheckedFieldIndicator"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.533333, 0.533333, 0.533333),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 1, 1),
 		},
-		[Enum.StudioStyleGuideColor.HeaderSection] = {
+		["HeaderSection"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.858824, 0.858824, 0.858824),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.713726, 0.713726, 0.713726),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.894118, 0.933333, 0.996078),
 		},
-		[Enum.StudioStyleGuideColor.Midlight] = {
+		["Midlight"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.890196, 0.890196, 0.890196),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.890196, 0.890196, 0.890196),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.890196, 0.890196, 0.890196),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.890196, 0.890196, 0.890196),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.890196, 0.890196, 0.890196),
 		},
-		[Enum.StudioStyleGuideColor.StatusBar] = {
+		["StatusBar"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 1, 1),
 		},
-		[Enum.StudioStyleGuideColor.DialogButton] = {
+		["DialogButton"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.858824, 0.858824, 0.858824),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.858824, 0.858824, 0.858824),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.894118, 0.933333, 0.996078),
 		},
-		[Enum.StudioStyleGuideColor.DialogButtonText] = {
+		["DialogButtonText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.721569, 0.721569, 0.721569),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0),
 		},
-		[Enum.StudioStyleGuideColor.DialogButtonBorder] = {
+		["DialogButtonBorder"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.8, 0.8, 0.8),
 		},
-		[Enum.StudioStyleGuideColor.DialogMainButton] = {
+		["DialogMainButton"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0.635294, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0.454902, 0.741176),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0.454902, 0.741176),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.6, 0.854902, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.196078, 0.709804, 1),
 		},
-		[Enum.StudioStyleGuideColor.DialogMainButtonText] = {
+		["DialogMainButtonText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 1, 1),
 		},
+		["InfoBarWarningBackground"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.992157, 0.984314, 0.67451),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.992157, 0.984314, 0.67451),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.992157, 0.984314, 0.67451),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.992157, 0.984314, 0.67451),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.992157, 0.984314, 0.67451),
+		},
+		["InfoBarWarningText"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0),
+		},
+		["ScriptMethod"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0.454902, 0.741176),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0.454902, 0.741176),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0.454902, 0.741176),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0.454902, 0.741176),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0.454902, 0.741176),
+		},
+		["ScriptProperty"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.282353, 0.360784, 0.556863),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.282353, 0.360784, 0.556863),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.282353, 0.360784, 0.556863),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.282353, 0.360784, 0.556863),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.282353, 0.360784, 0.556863),
+		},
+		["ScriptNil"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0.498039, 0.498039),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0.498039, 0.498039),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0.498039, 0.498039),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0.498039, 0.498039),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0.498039, 0.498039),
+		},
+		["ScriptBool"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0.498039, 0.498039),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0.498039, 0.498039),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0.498039, 0.498039),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0.498039, 0.498039),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0.498039, 0.498039),
+		},
+		["ScriptFunction"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0.498039),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0.498039),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0.498039),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0.498039),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0.498039),
+		},
+		["ScriptLocal"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0.498039),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0.498039),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0.498039),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0.498039),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0.498039),
+		},
+		["ScriptSelf"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0.498039),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0.498039),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0.498039),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0.498039),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0.498039),
+		},
+		["ScriptLuauKeyword"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0.498039),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0.498039),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0.498039),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0.498039),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0.498039),
+		},
+		["ScriptFunctionName"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0.454902, 0.741176),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0.454902, 0.741176),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0.454902, 0.741176),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0.454902, 0.741176),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0.454902, 0.741176),
+		},
+		["ScriptTodo"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0.498039, 0.0352941),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0.498039, 0.0352941),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0.498039, 0.0352941),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0.498039, 0.0352941),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0.498039, 0.0352941),
+		},
+		["AttributeCog"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.533333, 0.533333, 0.533333),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.533333, 0.533333, 0.533333),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.533333, 0.533333, 0.533333),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.533333, 0.533333, 0.533333),
+		},
 	},
 	[Enum.UITheme.Dark] = {
-		[Enum.StudioStyleGuideColor.MainBackground] = {
+		["MainBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.180392, 0.180392, 0.180392),
 		},
-		[Enum.StudioStyleGuideColor.Titlebar] = {
+		["Titlebar"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.207843, 0.207843, 0.207843),
 		},
-		[Enum.StudioStyleGuideColor.Dropdown] = {
+		["Dropdown"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.180392, 0.180392, 0.180392),
 		},
-		[Enum.StudioStyleGuideColor.Tooltip] = {
+		["Tooltip"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.207843, 0.207843, 0.207843),
 		},
-		[Enum.StudioStyleGuideColor.Notification] = {
+		["Notification"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.180392, 0.180392, 0.180392),
 		},
-		[Enum.StudioStyleGuideColor.ScrollBar] = {
+		["ScrollBar"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.219608, 0.219608, 0.219608),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.219608, 0.219608, 0.219608),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.27451, 0.27451, 0.27451),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.27451, 0.27451, 0.27451),
 		},
-		[Enum.StudioStyleGuideColor.ScrollBarBackground] = {
+		["ScrollBarBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.160784, 0.160784, 0.160784),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.160784, 0.160784, 0.160784),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.160784, 0.160784, 0.160784),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.160784, 0.160784, 0.160784),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.160784, 0.160784, 0.160784),
 		},
-		[Enum.StudioStyleGuideColor.TabBar] = {
+		["TabBar"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.180392, 0.180392, 0.180392),
 		},
-		[Enum.StudioStyleGuideColor.Tab] = {
+		["Tab"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.145098, 0.145098, 0.145098),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.164706, 0.164706, 0.164706),
 		},
-		[Enum.StudioStyleGuideColor.RibbonTab] = {
+		["RibbonTab"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.180392, 0.180392, 0.180392),
 		},
-		[Enum.StudioStyleGuideColor.RibbonTabTopBar] = {
+		["RibbonTabTopBar"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.207843, 0.709804, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.207843, 0.709804, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.207843, 0.709804, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.207843, 0.709804, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.207843, 0.709804, 1),
 		},
-		[Enum.StudioStyleGuideColor.Button] = {
+		["Button"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.235294, 0.235294, 0.235294),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0.635294, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.160784, 0.160784, 0.160784),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.235294, 0.235294, 0.235294),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.258824, 0.258824, 0.258824),
 		},
-		[Enum.StudioStyleGuideColor.MainButton] = {
+		["MainButton"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0.635294, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0.635294, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0.454902, 0.741176),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0.635294, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.196078, 0.709804, 1),
 		},
-		[Enum.StudioStyleGuideColor.RibbonButton] = {
+		["RibbonButton"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.109804, 0.109804, 0.109804),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.109804, 0.109804, 0.109804),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.145098, 0.145098, 0.145098),
 		},
-		[Enum.StudioStyleGuideColor.ViewPortBackground] = {
+		["ViewPortBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.145098, 0.145098, 0.145098),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.145098, 0.145098, 0.145098),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.145098, 0.145098, 0.145098),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.145098, 0.145098, 0.145098),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.145098, 0.145098, 0.145098),
 		},
-		[Enum.StudioStyleGuideColor.InputFieldBackground] = {
+		["InputFieldBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.145098, 0.145098, 0.145098),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.145098, 0.145098, 0.145098),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.145098, 0.145098, 0.145098),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.258824, 0.258824, 0.258824),
 		},
-		[Enum.StudioStyleGuideColor.Item] = {
+		["Item"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.0431373, 0.352941, 0.686275),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.258824, 0.258824, 0.258824),
 		},
-		[Enum.StudioStyleGuideColor.TableItem] = {
+		["TableItem"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.164706, 0.164706, 0.164706),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.0431373, 0.352941, 0.686275),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.164706, 0.164706, 0.164706),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.164706, 0.164706, 0.164706),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.258824, 0.258824, 0.258824),
 		},
-		[Enum.StudioStyleGuideColor.CategoryItem] = {
+		["CategoryItem"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.207843, 0.207843, 0.207843),
 		},
-		[Enum.StudioStyleGuideColor.GameSettingsTableItem] = {
+		["GameSettingsTableItem"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.164706, 0.164706, 0.164706),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.0431373, 0.352941, 0.686275),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.164706, 0.164706, 0.164706),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.164706, 0.164706, 0.164706),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.258824, 0.258824, 0.258824),
 		},
-		[Enum.StudioStyleGuideColor.GameSettingsTooltip] = {
+		["GameSettingsTooltip"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.207843, 0.207843, 0.207843),
 		},
-		[Enum.StudioStyleGuideColor.EmulatorBar] = {
+		["EmulatorBar"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.145098, 0.145098, 0.145098),
 		},
-		[Enum.StudioStyleGuideColor.EmulatorDropDown] = {
+		["EmulatorDropDown"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.258824, 0.258824, 0.258824),
 		},
-		[Enum.StudioStyleGuideColor.ColorPickerFrame] = {
+		["ColorPickerFrame"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.180392, 0.180392, 0.180392),
 		},
-		[Enum.StudioStyleGuideColor.CurrentMarker] = {
+		["CurrentMarker"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.258824, 0.258824, 0.258824),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.0431373, 0.352941, 0.686275),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.258824, 0.258824, 0.258824),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.258824, 0.258824, 0.258824),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.258824, 0.258824, 0.258824),
 		},
-		[Enum.StudioStyleGuideColor.Border] = {
+		["Border"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.133333, 0.133333, 0.133333),
 		},
-		[Enum.StudioStyleGuideColor.Shadow] = {
+		["Shadow"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.25098, 0.25098, 0.25098),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.25098, 0.25098, 0.25098),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.25098, 0.25098, 0.25098),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.25098, 0.25098, 0.25098),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.25098, 0.25098, 0.25098),
 		},
-		[Enum.StudioStyleGuideColor.Light] = {
+		["Light"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.25098, 0.25098, 0.25098),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.25098, 0.25098, 0.25098),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.25098, 0.25098, 0.25098),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.25098, 0.25098, 0.25098),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.25098, 0.25098, 0.25098),
 		},
-		[Enum.StudioStyleGuideColor.Dark] = {
+		["Dark"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.133333, 0.133333, 0.133333),
 		},
-		[Enum.StudioStyleGuideColor.Mid] = {
+		["Mid"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.133333, 0.133333, 0.133333),
 		},
-		[Enum.StudioStyleGuideColor.MainText] = {
+		["MainText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.333333, 0.333333, 0.333333),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 1, 1),
 		},
-		[Enum.StudioStyleGuideColor.SubText] = {
+		["SubText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.333333, 0.333333, 0.333333),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.666667, 0.666667, 0.666667),
 		},
-		[Enum.StudioStyleGuideColor.TitlebarText] = {
+		["TitlebarText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.333333, 0.333333, 0.333333),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.666667, 0.666667, 0.666667),
 		},
-		[Enum.StudioStyleGuideColor.BrightText] = {
+		["BrightText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.898039, 0.898039, 0.898039),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.898039, 0.898039, 0.898039),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.898039, 0.898039, 0.898039),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.898039, 0.898039, 0.898039),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.898039, 0.898039, 0.898039),
 		},
-		[Enum.StudioStyleGuideColor.DimmedText] = {
+		["DimmedText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.4, 0.4, 0.4),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.4, 0.4, 0.4),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.4, 0.4, 0.4),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.4, 0.4, 0.4),
 		},
-		[Enum.StudioStyleGuideColor.LinkText] = {
+		["LinkText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.207843, 0.709804, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.207843, 0.709804, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.207843, 0.709804, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.207843, 0.709804, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.207843, 0.709804, 1),
 		},
-		[Enum.StudioStyleGuideColor.WarningText] = {
+		["WarningText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 0.556863, 0.235294),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 0.556863, 0.235294),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 0.556863, 0.235294),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 0.556863, 0.235294),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 0.556863, 0.235294),
 		},
-		[Enum.StudioStyleGuideColor.ErrorText] = {
+		["ErrorText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 0.266667, 0.266667),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 0.266667, 0.266667),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 0.266667, 0.266667),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 0.266667, 0.266667),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 0.266667, 0.266667),
 		},
-		[Enum.StudioStyleGuideColor.InfoText] = {
+		["InfoText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.501961, 0.843137, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.501961, 0.843137, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.501961, 0.843137, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.501961, 0.843137, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.501961, 0.843137, 1),
 		},
-		[Enum.StudioStyleGuideColor.SensitiveText] = {
+		["SensitiveText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.819608, 0.364706, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.819608, 0.364706, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.819608, 0.364706, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.819608, 0.364706, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.819608, 0.364706, 1),
 		},
-		[Enum.StudioStyleGuideColor.ScriptSideWidget] = {
+		["ScriptSideWidget"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.145098, 0.145098, 0.145098),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.145098, 0.145098, 0.145098),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.145098, 0.145098, 0.145098),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.145098, 0.145098, 0.145098),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.145098, 0.145098, 0.145098),
 		},
-		[Enum.StudioStyleGuideColor.ScriptBackground] = {
+		["ScriptBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.145098, 0.145098, 0.145098),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.145098, 0.145098, 0.145098),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.145098, 0.145098, 0.145098),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.145098, 0.145098, 0.145098),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.145098, 0.145098, 0.145098),
 		},
-		[Enum.StudioStyleGuideColor.ScriptText] = {
+		["ScriptText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.8, 0.8, 0.8),
 		},
-		[Enum.StudioStyleGuideColor.ScriptSelectionText] = {
+		["ScriptSelectionText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 1, 1),
 		},
-		[Enum.StudioStyleGuideColor.ScriptSelectionBackground] = {
+		["ScriptSelectionBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.0431373, 0.352941, 0.686275),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.0431373, 0.352941, 0.686275),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.0431373, 0.352941, 0.686275),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.0431373, 0.352941, 0.686275),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.0431373, 0.352941, 0.686275),
 		},
-		[Enum.StudioStyleGuideColor.ScriptFindSelectionBackground] = {
+		["ScriptFindSelectionBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.552941, 0.462745, 0),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.552941, 0.462745, 0),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.552941, 0.462745, 0),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.552941, 0.462745, 0),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.552941, 0.462745, 0),
 		},
-		[Enum.StudioStyleGuideColor.ScriptMatchingWordSelectionBackground] = {
+		["ScriptMatchingWordSelectionBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.333333, 0.333333, 0.333333),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.333333, 0.333333, 0.333333),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.333333, 0.333333, 0.333333),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.333333, 0.333333, 0.333333),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.333333, 0.333333, 0.333333),
 		},
-		[Enum.StudioStyleGuideColor.ScriptOperator] = {
+		["ScriptOperator"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.8, 0.8, 0.8),
 		},
-		[Enum.StudioStyleGuideColor.ScriptNumber] = {
+		["ScriptNumber"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 0.776471, 0),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 0.776471, 0),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 0.776471, 0),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 0.776471, 0),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 0.776471, 0),
 		},
-		[Enum.StudioStyleGuideColor.ScriptString] = {
+		["ScriptString"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.678431, 0.945098, 0.584314),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.678431, 0.945098, 0.584314),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.678431, 0.945098, 0.584314),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.678431, 0.945098, 0.584314),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.678431, 0.945098, 0.584314),
 		},
-		[Enum.StudioStyleGuideColor.ScriptComment] = {
+		["ScriptComment"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.4, 0.4, 0.4),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.4, 0.4, 0.4),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.4, 0.4, 0.4),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.4, 0.4, 0.4),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.4, 0.4, 0.4),
 		},
-		[Enum.StudioStyleGuideColor.ScriptPreprocessor] = {
-			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.4, 1, 0.8),
-			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.4, 1, 0.8),
-			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.4, 1, 0.8),
-			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.4, 1, 0.8),
-			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.4, 1, 0.8),
-		},
-		[Enum.StudioStyleGuideColor.ScriptKeyword] = {
+		["ScriptKeyword"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.972549, 0.427451, 0.486275),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.972549, 0.427451, 0.486275),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.972549, 0.427451, 0.486275),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.972549, 0.427451, 0.486275),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.972549, 0.427451, 0.486275),
 		},
-		[Enum.StudioStyleGuideColor.ScriptBuiltInFunction] = {
+		["ScriptBuiltInFunction"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.517647, 0.839216, 0.968628),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.517647, 0.839216, 0.968628),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.517647, 0.839216, 0.968628),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.517647, 0.839216, 0.968628),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.517647, 0.839216, 0.968628),
 		},
-		[Enum.StudioStyleGuideColor.ScriptWarning] = {
+		["ScriptWarning"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 0.45098, 0.0823529),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 0.45098, 0.0823529),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 0.45098, 0.0823529),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 0.45098, 0.0823529),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 0.45098, 0.0823529),
 		},
-		[Enum.StudioStyleGuideColor.ScriptError] = {
+		["ScriptError"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 0, 0),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 0, 0),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 0, 0),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 0, 0),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 0, 0),
 		},
-		[Enum.StudioStyleGuideColor.DebuggerCurrentLine] = {
+		["ScriptWhitespace"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.333333, 0.333333, 0.333333),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.333333, 0.333333, 0.333333),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.333333, 0.333333, 0.333333),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.333333, 0.333333, 0.333333),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.333333, 0.333333, 0.333333),
+		},
+		["ScriptRuler"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.4, 0.4, 0.4),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.4, 0.4, 0.4),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.4, 0.4, 0.4),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.4, 0.4, 0.4),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.4, 0.4, 0.4),
+		},
+		["DebuggerCurrentLine"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.164706, 0.235294, 0.298039),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.164706, 0.235294, 0.298039),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.164706, 0.235294, 0.298039),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.164706, 0.235294, 0.298039),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.164706, 0.235294, 0.298039),
 		},
-		[Enum.StudioStyleGuideColor.DebuggerErrorLine] = {
+		["DebuggerErrorLine"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.298039, 0.164706, 0.164706),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.298039, 0.164706, 0.164706),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.298039, 0.164706, 0.164706),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.298039, 0.164706, 0.164706),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.298039, 0.164706, 0.164706),
 		},
-		[Enum.StudioStyleGuideColor.DiffFilePathText] = {
+		["ScriptEditorCurrentLine"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.176471, 0.196078, 0.254902),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.176471, 0.196078, 0.254902),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.176471, 0.196078, 0.254902),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.176471, 0.196078, 0.254902),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.176471, 0.196078, 0.254902),
+		},
+		["DiffFilePathText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.666667, 0.666667, 0.666667),
 		},
-		[Enum.StudioStyleGuideColor.DiffTextHunkInfo] = {
+		["DiffTextHunkInfo"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.666667, 0.666667, 0.666667),
 		},
-		[Enum.StudioStyleGuideColor.DiffTextNoChange] = {
+		["DiffTextNoChange"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.8, 0.8, 0.8),
 		},
-		[Enum.StudioStyleGuideColor.DiffTextAddition] = {
+		["DiffTextAddition"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.8, 0.8, 0.8),
 		},
-		[Enum.StudioStyleGuideColor.DiffTextDeletion] = {
+		["DiffTextDeletion"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.8, 0.8, 0.8),
 		},
-		[Enum.StudioStyleGuideColor.DiffTextSeparatorBackground] = {
+		["DiffTextSeparatorBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.192157, 0.223529, 0.286275),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.192157, 0.223529, 0.286275),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.192157, 0.223529, 0.286275),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.192157, 0.223529, 0.286275),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.192157, 0.223529, 0.286275),
 		},
-		[Enum.StudioStyleGuideColor.DiffTextNoChangeBackground] = {
+		["DiffTextNoChangeBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.105882, 0.121569, 0.12549),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.105882, 0.121569, 0.12549),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.105882, 0.121569, 0.12549),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.105882, 0.121569, 0.12549),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.105882, 0.121569, 0.12549),
 		},
-		[Enum.StudioStyleGuideColor.DiffTextAdditionBackground] = {
+		["DiffTextAdditionBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.188235, 0.247059, 0.172549),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.188235, 0.247059, 0.172549),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.188235, 0.247059, 0.172549),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.188235, 0.247059, 0.172549),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.188235, 0.247059, 0.172549),
 		},
-		[Enum.StudioStyleGuideColor.DiffTextDeletionBackground] = {
+		["DiffTextDeletionBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.282353, 0.117647, 0.0941177),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.282353, 0.117647, 0.0941177),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.282353, 0.117647, 0.0941177),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.282353, 0.117647, 0.0941177),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.282353, 0.117647, 0.0941177),
 		},
-		[Enum.StudioStyleGuideColor.DiffLineNum] = {
+		["DiffLineNum"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.666667, 0.666667, 0.666667),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.666667, 0.666667, 0.666667),
 		},
-		[Enum.StudioStyleGuideColor.DiffLineNumSeparatorBackground] = {
+		["DiffLineNumSeparatorBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.235294, 0.32549, 0.482353),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.235294, 0.32549, 0.482353),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.235294, 0.32549, 0.482353),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.235294, 0.32549, 0.482353),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.235294, 0.32549, 0.482353),
 		},
-		[Enum.StudioStyleGuideColor.DiffLineNumNoChangeBackground] = {
+		["DiffLineNumNoChangeBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.105882, 0.12549, 0.137255),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.105882, 0.12549, 0.137255),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.105882, 0.12549, 0.137255),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.105882, 0.12549, 0.137255),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.105882, 0.12549, 0.137255),
 		},
-		[Enum.StudioStyleGuideColor.DiffLineNumAdditionBackground] = {
+		["DiffLineNumAdditionBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.215686, 0.301961, 0.192157),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.215686, 0.301961, 0.192157),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.215686, 0.301961, 0.192157),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.215686, 0.301961, 0.192157),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.215686, 0.301961, 0.192157),
 		},
-		[Enum.StudioStyleGuideColor.DiffLineNumDeletionBackground] = {
+		["DiffLineNumDeletionBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.356863, 0.133333, 0.105882),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.356863, 0.133333, 0.105882),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.356863, 0.133333, 0.105882),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.356863, 0.133333, 0.105882),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.356863, 0.133333, 0.105882),
 		},
-		[Enum.StudioStyleGuideColor.DiffFilePathBackground] = {
+		["DiffFilePathBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.207843, 0.207843, 0.207843),
 		},
-		[Enum.StudioStyleGuideColor.DiffFilePathBorder] = {
+		["DiffFilePathBorder"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.133333, 0.133333, 0.133333),
 		},
-		[Enum.StudioStyleGuideColor.Separator] = {
+		["ChatIncomingBgColor"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.917647, 0.917647, 0.917647),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.917647, 0.917647, 0.917647),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.917647, 0.917647, 0.917647),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.917647, 0.917647, 0.917647),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.917647, 0.917647, 0.917647),
+		},
+		["ChatIncomingTextColor"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.223529, 0.231373, 0.239216),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.223529, 0.231373, 0.239216),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.223529, 0.231373, 0.239216),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.223529, 0.231373, 0.239216),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.223529, 0.231373, 0.239216),
+		},
+		["ChatOutgoingBgColor"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.258824, 0.258824, 0.258824),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.258824, 0.258824, 0.258824),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.258824, 0.258824, 0.258824),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.258824, 0.258824, 0.258824),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.258824, 0.258824, 0.258824),
+		},
+		["ChatOutgoingTextColor"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.8, 0.8, 0.8),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.8, 0.8, 0.8),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.8, 0.8, 0.8),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.8, 0.8, 0.8),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.8, 0.8, 0.8),
+		},
+		["ChatModeratedMessageColor"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 0.266667, 0.266667),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 0.266667, 0.266667),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 0.266667, 0.266667),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(1, 0.266667, 0.266667),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 0.266667, 0.266667),
+		},
+		["Separator"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.133333, 0.133333, 0.133333),
 		},
-		[Enum.StudioStyleGuideColor.ButtonBorder] = {
+		["ButtonBorder"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.207843, 0.207843, 0.207843),
 		},
-		[Enum.StudioStyleGuideColor.ButtonText] = {
+		["ButtonText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.333333, 0.333333, 0.333333),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.8, 0.8, 0.8),
 		},
-		[Enum.StudioStyleGuideColor.InputFieldBorder] = {
+		["InputFieldBorder"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.101961, 0.101961, 0.101961),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.207843, 0.709804, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.101961, 0.101961, 0.101961),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.258824, 0.258824, 0.258824),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.227451, 0.227451, 0.227451),
 		},
-		[Enum.StudioStyleGuideColor.CheckedFieldBackground] = {
+		["CheckedFieldBackground"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.145098, 0.145098, 0.145098),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.145098, 0.145098, 0.145098),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.145098, 0.145098, 0.145098),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.145098, 0.145098, 0.145098),
 		},
-		[Enum.StudioStyleGuideColor.CheckedFieldBorder] = {
+		["CheckedFieldBorder"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.101961, 0.101961, 0.101961),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.101961, 0.101961, 0.101961),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.101961, 0.101961, 0.101961),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.25098, 0.25098, 0.25098),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.227451, 0.227451, 0.227451),
 		},
-		[Enum.StudioStyleGuideColor.CheckedFieldIndicator] = {
+		["CheckedFieldIndicator"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.207843, 0.709804, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.207843, 0.709804, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.207843, 0.709804, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.333333, 0.333333, 0.333333),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.207843, 0.709804, 1),
 		},
-		[Enum.StudioStyleGuideColor.HeaderSection] = {
+		["HeaderSection"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.160784, 0.160784, 0.160784),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.207843, 0.207843, 0.207843),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.282353, 0.282353, 0.282353),
 		},
-		[Enum.StudioStyleGuideColor.Midlight] = {
+		["Midlight"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.133333, 0.133333, 0.133333),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.133333, 0.133333, 0.133333),
 		},
-		[Enum.StudioStyleGuideColor.StatusBar] = {
+		["StatusBar"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.180392, 0.180392, 0.180392),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.180392, 0.180392, 0.180392),
 		},
-		[Enum.StudioStyleGuideColor.DialogButton] = {
+		["DialogButton"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.235294, 0.235294, 0.235294),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.2, 0.2, 0.2),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.2, 0.2, 0.2),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.235294, 0.235294, 0.235294),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.258824, 0.258824, 0.258824),
 		},
-		[Enum.StudioStyleGuideColor.DialogButtonText] = {
+		["DialogButtonText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.8, 0.8, 0.8),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.4, 0.4, 0.4),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.8, 0.8, 0.8),
 		},
-		[Enum.StudioStyleGuideColor.DialogButtonBorder] = {
+		["DialogButtonBorder"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.235294, 0.235294, 0.235294),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.235294, 0.235294, 0.235294),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.235294, 0.235294, 0.235294),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.235294, 0.235294, 0.235294),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.235294, 0.235294, 0.235294),
 		},
-		[Enum.StudioStyleGuideColor.DialogMainButton] = {
+		["DialogMainButton"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0.635294, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0.454902, 0.741176),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0.454902, 0.741176),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.235294, 0.235294, 0.235294),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.196078, 0.709804, 1),
 		},
-		[Enum.StudioStyleGuideColor.DialogMainButtonText] = {
+		["DialogMainButtonText"] = {
 			[Enum.StudioStyleGuideModifier.Default] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(1, 1, 1),
 			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.4, 0.4, 0.4),
 			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(1, 1, 1),
+		},
+		["InfoBarWarningBackground"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.992157, 0.984314, 0.67451),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.992157, 0.984314, 0.67451),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.992157, 0.984314, 0.67451),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.992157, 0.984314, 0.67451),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.992157, 0.984314, 0.67451),
+		},
+		["InfoBarWarningText"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0),
+		},
+		["ScriptMethod"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0),
+		},
+		["ScriptProperty"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0),
+		},
+		["ScriptNil"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0),
+		},
+		["ScriptBool"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0),
+		},
+		["ScriptFunction"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0),
+		},
+		["ScriptLocal"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0),
+		},
+		["ScriptSelf"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0),
+		},
+		["ScriptLuauKeyword"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.972549, 0.427451, 0.486275),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.972549, 0.427451, 0.486275),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.972549, 0.427451, 0.486275),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.972549, 0.427451, 0.486275),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.972549, 0.427451, 0.486275),
+		},
+		["ScriptFunctionName"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0),
+		},
+		["ScriptTodo"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0, 0, 0),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0, 0, 0),
+		},
+		["AttributeCog"] = {
+			[Enum.StudioStyleGuideModifier.Default] = Color3.new(0.666667, 0.666667, 0.666667),
+			[Enum.StudioStyleGuideModifier.Selected] = Color3.new(0.8, 0.8, 0.8),
+			[Enum.StudioStyleGuideModifier.Pressed] = Color3.new(0.666667, 0.666667, 0.666667),
+			[Enum.StudioStyleGuideModifier.Disabled] = Color3.new(0.666667, 0.666667, 0.666667),
+			[Enum.StudioStyleGuideModifier.Hover] = Color3.new(0.666667, 0.666667, 0.666667),
 		},
 	},
 }
