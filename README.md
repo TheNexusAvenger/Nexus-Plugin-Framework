@@ -1,4 +1,4 @@
-# Nexus-Git
+# Nexus-Plugin-Framework
 Nexus Plugin Framework simplifies development of Roblox Plugins
 by internally implementing common features (like theme colors
 and Qt scroll bars).
@@ -14,5 +14,5 @@ Both issues and pull requests are accepted for this project.
 More information can be found [here](docs/contributing.md).
 
 ## License
-Nexus Instance is available under the terms of the Apache 
-Liscence 2.0. See [LICENSE](LICENSE) for details.
+Nexus Instance is available under the terms of the MIT 
+Licence. See [LICENSE](LICENSE) for details.
