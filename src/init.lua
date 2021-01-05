@@ -19,7 +19,6 @@ local NEXUS_CLASS_PATHS = {
 	["CollapsableListFrame"] = "UI.CollapsableList.NexusCollapsableListFrame",
 	["ListContentsPropertyConstraint"] = "UI.CollapsableList.Constraint.NexusContentsPropertyConstraint",
 	["ListMultiConstraint"] = "UI.CollapsableList.Constraint.NexusMultiConstraint",
-	["ListPositionConstraint"] = "UI.CollapsableList.Constraint.NexusPositionConstraint",
 	["ListSelectionConstraint"] = "UI.CollapsableList.Constraint.NexusSelectionConstraint",
 	["BoundingSizeConstraint"] = "UI.Constraint.NexusBoundingSizeConstraint",
 	["CheckBox"] = "UI.Input.NexusCheckBox",
