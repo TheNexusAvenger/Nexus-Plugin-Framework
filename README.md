@@ -15,4 +15,4 @@ More information can be found [here](docs/contributing.md).
 
 ## License
 Nexus Instance is available under the terms of the MIT 
-Licence. See [LICENSE](LICENSE) for details.
+License. See [LICENSE](LICENSE) for details.
