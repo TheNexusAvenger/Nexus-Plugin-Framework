@@ -33,8 +33,7 @@ If an instance is created using this method and isn't on the list,
 a wrapped version of the instance is used.
 
 ## `NexusInstance NexusPluginFramework:GetClass(string ClassName)`
-Returns the class for a given name. Note that it
-will yield if the class doesn't exist.
+Returns the class for a given name.
 
 ## [`NexusPlugin`](Plugin/NexusPlugin.md) ` NexusPluginFramework:GetPlugin()`
 Returns the plugin instance.

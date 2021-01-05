@@ -55,11 +55,13 @@ function NexusPluginFramework.new(ClassName,...)
 end
 
 --[[
-Returns the class for a given name. Note that it
-will yield if the class doesn't exist.
+Returns the class for a given name.
 --]]
 function NexusPluginFramework:GetClass(ClassName)
 	local Path = NEXUS_CLASS_PATHS[ClassName]
+	if not Path then
+		error("Class does not exist: "..ClassName)
+	end
 	return NexusPluginFramework:GetResource(Path)
 end
 
