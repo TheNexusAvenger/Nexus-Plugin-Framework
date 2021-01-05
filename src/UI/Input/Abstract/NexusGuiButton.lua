@@ -19,7 +19,7 @@ NexusPluginFramework:SetContextResource(NexusGuiButton)
 
 
 --[[
-Creates a Nexus Text Box object.
+Creates a Nexus Gui Button object.
 --]]
 function NexusGuiButton:__new(ButtonClassName)
 	self:InitializeSuper(ButtonClassName)

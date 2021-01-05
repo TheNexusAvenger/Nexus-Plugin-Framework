@@ -19,7 +19,7 @@ NexusPluginFramework:SetContextResource(NexusBoundingSizeConstraint)
 
 
 --[[
-Creates a Nexus Check Box object.
+Creates a Nexus Bounding Size Constraint object.
 --]]
 function NexusBoundingSizeConstraint:__new(Frame)
 	self:InitializeSuper()
