@@ -16,32 +16,31 @@ local NexusStudioTheme = NexusContainer:Extend()
 NexusStudioTheme:SetClassName(CLASS_NAME)
 NexusPluginFramework:SetContextResource(NexusStudioTheme)
 
-local CachedThemes = {}
+local CachedTheme
 
 
 
 --[[
 Creates a theme class from an enum.
 --]]
-function NexusStudioTheme.FromThemeEnum(ThemeType)
+function NexusStudioTheme.FromThemeEnum()
 	--Create the cached theme.
-	if not CachedThemes[ThemeType] then
-		CachedThemes[ThemeType] = NexusStudioTheme.new(ThemeType)
+	if not CachedTheme then
+		CachedTheme = NexusStudioTheme.new()
 	end
 	
 	--Return the cached theme.
-	return CachedThemes[ThemeType]
+	return CachedTheme
 end
 
 --[[
 Creates a Studio Theme object.
 --]]
-function NexusStudioTheme:__new(Theme)
+function NexusStudioTheme:__new()
 	self:InitializeSuper()
 	
 	--Store the theme and set the name.
-	self.__Theme = Theme
-	self.Name = Theme.Name
+	self.Name = "Fallback"
 end
 
 --[[
@@ -60,7 +59,7 @@ function NexusStudioTheme:GetColor(StyleGuideColor,Modifier)
 	end
 	
 	--Return the color.
-	return ThemeColors[self.__Theme][StyleGuideColor][Modifier]
+	return ThemeColors[StyleGuideColor][Modifier]
 end
 
 --[[

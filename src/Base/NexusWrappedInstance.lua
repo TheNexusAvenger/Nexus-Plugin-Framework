@@ -196,7 +196,7 @@ function NexusWrappedInstance:__new(ExistingInstance)
 	end
 	
 	--Set up changing the colors when the setting changes.
-	table.insert(self.__ConnectionsToClear,Settings:GetSettingsChangedSignal("Studio","UI Theme"):Connect(UpdateAllColorProperties))
+	table.insert(self.__ConnectionsToClear,settings()["Studio"].ThemeChanged:Connect(UpdateAllColorProperties))
 	
 	--Set up changing colors when enabled/disabled and selected/deselected.
 	self:__SetChangedOverride("Disabled",UpdateAllColorProperties)

@@ -211,7 +211,7 @@ function NexusCollapsableListFrame:__new()
 		--Update the container color.
 		UpdateContainerColor()
 	end)
-	Settings:GetSettingsChangedSignal("Studio","UI Theme"):Connect(UpdateContainerColor)
+	Settings:GetSettingsChangedSignal("Studio","Theme"):Connect(UpdateContainerColor)
 	self:__SetChangedOverride("HighlightColor3",UpdateContainerColor)
 	self:__SetChangedOverride("Selectable",UpdateContainerColor)
 	self:__SetChangedOverride("Selected",UpdateContainerColor)
