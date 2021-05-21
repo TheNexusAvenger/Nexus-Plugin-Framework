@@ -209,7 +209,7 @@ function NexusWrappedInstance:__new(ExistingInstance)
 	local IgnoreChangesQueue = self.__IgnoreChangesQueue
 	local NoBackwardsReplicationProperties = self.__NoBackwardsReplicationProperties
 	local RawGet = self.__rawget
-	table.insert(self.__ConnectionsToClear,self.Changed:Connect(function(PropertyName)
+	self:AddGenericPropertyFinalizer(function(PropertyName,NewProperty)
 		--If an overriden change function exists, call it.
 		local ChangedFunction = ChangedFunctions[PropertyName]
 		if ChangedFunction then
@@ -225,7 +225,6 @@ function NexusWrappedInstance:__new(ExistingInstance)
 		
 		--Mirror the property.
 		if string.sub(PropertyName,1,2) ~= "__" then
-			local NewProperty = RawGet(self,PropertyName)
 			local ExistingProperty = ExistingInstance[PropertyName]
 			local ExistingPropertyType = typeof(ExistingProperty)
 			local NewPropertyType = typeof(NewProperty)
@@ -241,7 +240,7 @@ function NexusWrappedInstance:__new(ExistingInstance)
 				ExistingInstance[PropertyName] = NewProperty
 			end
 		end
-	end))
+	end)
 	
 	--Mirror changes from the instance.
 	table.insert(self.__ConnectionsToClear,ExistingInstance.Changed:Connect(function(PropertyName)
